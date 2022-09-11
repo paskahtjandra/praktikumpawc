@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Calculator Program</title>
+  </head>
+    <body>
+        <h1>Simple Calculator Program</h1>
+        <p>100 + 20 = <span id="add"></span></p>
+        <p>100 - 20 = <span id="subtract"></span></p>
+        <p>100 * 20 = <span id="multiply"></span></p>
+        <p>100 / 20 = <span id="divide"></span></p>
+
+        <script>
+            const a = 100;
+            const b = 20;
+            document.getElementById("add").innerHTML = a + b;
+            document.getElementById("subtract").innerHTML = a - b;
+            document.getElementById("multiply").innerHTML = a * b;
+            document.getElementById("divide").innerHTML = a / b;
+        </script>
+    </body>
+</html>
