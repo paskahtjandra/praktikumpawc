@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operasi Perhitungan Sederhana</title>
+  </head>
+  <body>
+    <h1>Operasi Perhitungan Sederhana</h1>
+    <form name="baris">
+      <h4>Masukkan angka pertama :</h4>
+      <input type="number" name="angka1" /> <br />
+      <h4>Masukkan angka kedua :</h4>
+      <input type="number" name="angka2" /> <br /><br />
+      <input
+        type="button"
+        name="submit"
+        value="Penambahan"
+        onclick="penambahan()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Pengurangan"
+        onclick="pengurangan()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Perkalian"
+        onclick="perkalian()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Pembagian"
+        onclick="Pembagian()"
+      />
+      <h4>Hasilnya :</h4>
+      <input type="number" name="hasil" value="" />
+    </form>
+  </body>
+  <script>
+    function pengecekanAngka() {
+      if (baris.angka1.value == "" || baris.angka2.value == " ") {
+        alert("Angka yang dimasukkan tidak ada !!");
+      }
+    }
+    function penambahan() {
+      pengecekanAngka();
+      a = parseInt(baris.angka1.value);
+      b = parseInt(baris.angka2.value);
+      hasil = a + b;
+      baris.hasil.value = hasil;
+    }
+    function pengurangan() {
+      pengecekanAngka();
+      a = parseInt(baris.angka1.value);
+      b = parseInt(baris.angka2.value);
+      hasil = a - b;
+      baris.hasil.value = hasil;
+    }
+    function perkalian() {
+      pengecekanAngka();
+      a = parseInt(baris.angka1.value);
+      b = parseInt(baris.angka2.value);
+      hasil = a * b;
+      baris.hasil.value = hasil;
+    }
+    function Pembagian() {
+      pengecekanAngka();
+      a = parseInt(baris.angka1.value);
+      b = parseInt(baris.angka2.value);
+      hasil = a / b;
+      baris.hasil.value = hasil;
+    }
+  </script>
+</html>

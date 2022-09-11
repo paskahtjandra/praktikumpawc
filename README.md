@@ -1,0 +1,2 @@
+# praktikumpawc
+Semangat ya ges 
