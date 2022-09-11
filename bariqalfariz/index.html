@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initialscale=1.0" />
+    <title>Operasi Perhitungan bariq paw-c</title>
+  </head>
+  <body>
+    <h1>Operasi Perhitungan bariq paw-c</h1>
+    <form name="formm">
+      <h4>Masukkan angka pertama :</h4>
+      <input type="number" name="pertama" />
+      <br />
+      <h4>Masukkan angka kedua :</h4>
+      <input type="number" name="kedua" />
+      <br /><br />
+      <input
+        type="button"
+        name="submit"
+        value="Penambahan"
+        onclick="penambahan()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Pengurangan"
+        onclick="pengurangan()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Perkalian"
+        onclick="perkalian()"
+      />
+      <input
+        type="button"
+        name="submit"
+        value="Pembagian"
+        onclick="Pembagian()"
+      />
+      <h4>Hasilnya :</h4>
+      <input type="number" name="hasil" value="" />
+    </form>
+  </body>
+  <script>
+    function pengecekanAngka() {
+      if (formm.pertama.value == "" || formm.kedua.value == "    ") {
+        alert("Angka yang dimasukkan tidak ada !!");
+      }
+    }
+
+    function Pembagian() {
+      pengecekanAngka();
+      x = parseInt(formm.pertama.value);
+      y = parseInt(formm.kedua.value);
+      hasil = x / y;
+      formm.hasil.value = hasil;
+    }
+
+    function pengurangan() {
+      pengecekanAngka();
+      x = parseInt(formm.pertama.value);
+      y = parseInt(formm.kedua.value);
+      hasil = x - y;
+      formm.hasil.value = hasil;
+    }
+
+    function penambahan() {
+      pengecekanAngka();
+      x = parseInt(formm.pertama.value);
+      y = parseInt(formm.kedua.value);
+      hasil = x + y;
+      formm.hasil.value = hasil;
+    }
+
+    function perkalian() {
+      pengecekanAngka();
+      x = parseInt(formm.pertama.value);
+      y = parseInt(formm.kedua.value);
+      hasil = x * y;
+      formm.hasil.value = hasil;
+    }
+  </script>
+</html>
